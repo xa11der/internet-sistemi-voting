@@ -1,0 +1,24 @@
+[package]
+name = "contract"
+version = "0.1.0"
+authors = ["Aleksandar Sijan <aleksandar@mef.edu.rs>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cosmwasm-schema = "1.5.2"
+cosmwasm-std = "1.5.2"
+cw-storage-plus = "1.2.0"
+schemars = "=0.6.0"
+serde = { version = "1.0.196", features = ["derive"] }
+time = { version = "0.3.36", features = ["formatting"] }
+time-macros = { version = "0.2.0-alpha.1" }
+thiserror = "1.0.56"
+
+[dev-dependencies]
+cosmwasm-schema= "1.5.2"
+cosmwasm-schema-derive = "1.5.2"
